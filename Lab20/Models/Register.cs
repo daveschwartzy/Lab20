@@ -26,7 +26,7 @@ namespace Lab20.Models
             this.lastname = lastname;
             this.email = email;
             this.phonenumber = phonenumber;
-            this.password = password;
+            this.password = password;   
         }
 
         public string FirstName
