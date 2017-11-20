@@ -31,7 +31,7 @@ namespace Lab20.Models
         }
 
         [Required(ErrorMessage = "Name is Required!")]
-        [RegularExpression("^[A-Za-z]{1,}$", ErrorMessage = "Name only accepts letters!")]
+        [RegularExpression("^[A-Za-z]{1,}$", ErrorMessage = "First name must be at least one letter.")]
         public string FirstName
         {
             set { firstname = value; }
@@ -39,7 +39,7 @@ namespace Lab20.Models
         }
 
         [Required(ErrorMessage = "Name is Required!")]
-        [RegularExpression("^[A-Za-z]{1,}$", ErrorMessage = "Name only accepts letters!")]
+        [RegularExpression("^[A-Za-z]{1,}$", ErrorMessage = "Last name must be at least one letter!")]
         public string LastName
         {
             set { lastname = value; }
@@ -55,7 +55,7 @@ namespace Lab20.Models
 
         }
         [Required(ErrorMessage = "Phone number is required!")]
-        [RegularExpression("^([0-9]{3}-[0-9]{3}-[0-9]{4})$",ErrorMessage = "Phone number is in incorrect format")]
+        [RegularExpression("^([0-9]{3}-[0-9]{3}-[0-9]{4})$",ErrorMessage = "Phone number must be in 123-456-7890 format.")]
         public string PhoneNumber
         {
             set { phonenumber = value; }
