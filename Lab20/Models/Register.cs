@@ -14,6 +14,7 @@ namespace Lab20.Models
         private string email;
         private string phonenumber;
         private string password;
+        private string category;
 
         public Register() :this("","","","","")
         {
@@ -29,17 +30,23 @@ namespace Lab20.Models
             this.password = password;   
         }
 
+        [Required(ErrorMessage = "Name is Required!")]
+        [RegularExpression("^[A-Za-z]{1,}$", ErrorMessage = "Name only accepts letters!")]
         public string FirstName
         {
             set { firstname = value; }
             get { return firstname; }
         }
 
+        [Required(ErrorMessage = "Name is Required!")]
+        [RegularExpression("^[A-Za-z]{1,}$", ErrorMessage = "Name only accepts letters!")]
         public string LastName
         {
             set { lastname = value; }
             get { return lastname; }
         }
+        [Required(ErrorMessage ="Email address is required!")]
+        [EmailAddress(ErrorMessage ="Invalid email address.")]
         public string Email
         {
 
@@ -47,17 +54,25 @@ namespace Lab20.Models
             get { return email; }
 
         }
-
+        [Required(ErrorMessage = "Phone number is required!")]
+        [RegularExpression("^([0-9]{3}-[0-9]{3}-[0-9]{4})$",ErrorMessage = "Phone number is in incorrect format")]
         public string PhoneNumber
         {
             set { phonenumber = value; }
             get { return phonenumber; }
         }
-
+        [Required(ErrorMessage = "Password is required!")]
         public string Password
         {
             set { password = value; }
             get { return password; }
+        }
+
+        public string Category
+        {
+            set { category = value; }
+            get { return category; }
+
         }
     }
 }

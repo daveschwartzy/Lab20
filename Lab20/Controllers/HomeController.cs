@@ -35,9 +35,16 @@ namespace Lab20.Controllers
 
         public ActionResult ProcessSignup(Register Signup)
         {
-            ViewBag.FirstName = Signup.FirstName;
+            if (ModelState.IsValid)
+            {
+                ViewBag.FirstName = Signup.FirstName;
 
-            return View();
+                return View();
+            }
+            else
+            {
+                return View("Signup");
+            }
         }
     }
 }
