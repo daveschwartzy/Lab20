@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CoffeeShopDBModelStoreContainer" CdmEntityContainer="CoffeeShopDBEntities">
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="CoffeeShopDBModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Phone_Number" ColumnName="Phone Number" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last Name" />
+          <ScalarProperty Name="First_Name" ColumnName="First Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Items">
+      <EntityTypeMapping TypeName="CoffeeShopDBModel.Item">
+        <MappingFragment StoreEntitySet="Items">
+          <ScalarProperty Name="Item_Description" ColumnName="Item Description" />
+          <ScalarProperty Name="Item_Quantity" ColumnName="Item Quantity" />
+          <ScalarProperty Name="Item_Price" ColumnName="Item Price" />
+          <ScalarProperty Name="Item_Name" ColumnName="Item Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

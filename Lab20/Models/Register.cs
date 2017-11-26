@@ -45,6 +45,8 @@ namespace Lab20.Models
             set { lastname = value; }
             get { return lastname; }
         }
+
+
         [Required(ErrorMessage ="Email address is required!")]
         [EmailAddress(ErrorMessage ="Invalid email address.")]
         public string Email
@@ -54,6 +56,8 @@ namespace Lab20.Models
             get { return email; }
 
         }
+
+
         [Required(ErrorMessage = "Phone number is required!")]
         [RegularExpression("^([0-9]{3}-[0-9]{3}-[0-9]{4})$",ErrorMessage = "Phone number must be in 123-456-7890 format.")]
         public string PhoneNumber
@@ -61,6 +65,8 @@ namespace Lab20.Models
             set { phonenumber = value; }
             get { return phonenumber; }
         }
+
+
         [Required(ErrorMessage = "Password is required!")]
         public string Password
         {

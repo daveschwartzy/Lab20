@@ -1,0 +1,50 @@
+﻿<style>
+    .table {
+        background-color: navajowhite;
+    }
+
+</style>
+
+
+@{
+    ViewBag.Title = "ItemAdmin";
+}
+<a href="/Home/NewItemForm">Add New Item</a>
+<h2>Item Admin</h2>
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Quantity</th>
+        <th>Price</th>
+
+    </tr>
+
+    @foreach(var ItemRecord in ViewBag.ItemList)
+    {
+        <tr>
+            <td>
+                @ItemRecord.Item_Name
+            </td>
+            <td>
+                @ItemRecord.Item_Description
+            </td>
+            <td>
+                @ItemRecord.Item_Quantity
+            </td>
+            <td>
+                @ItemRecord.Item_Price
+            </td>
+            <td>
+                <a href="/Home/UpdateItem?Item_Name=@ItemRecord.Item_Name">Update</a>
+            </td>
+            <td>
+                <a href="/Home/DeleteItem?Item_Name=@ItemRecord.Item_Name" onclick="return confirm('Are you sure?')" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-trash"></span>Trash
+                </a>
+            </td>
+        </tr>
+    }
+
+
+</table>

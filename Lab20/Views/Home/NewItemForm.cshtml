@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "NewItemForm";
+}
+
+<h2>New Item Form</h2>
+<form action="/Home/SaveItem" method="post">
+    <label>Item Name</label><input type="text" name="Item_Name" /><br />
+    <label>Item Description</label><input type="text" name="Item_Description" /><br />
+    <label>Item Price</label><input type="text" name="Item_Price" /><br />
+    <label>Item Quantity</label><input type="text" name="Item_Quantity" /><br />
+    <input type="submit" value="Save" />
+</form>
